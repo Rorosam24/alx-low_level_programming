@@ -8,37 +8,35 @@
  */
 int main(void)
 {
-	int n1 = 0, n2, n3;
 
-	while (nl <= 9)
-	{
-		n2 = 0;
-		while (n2 <= 9)
-		{
-			n3 = 0;
-			while (n3 <= 9)
-			{
+int num1, num2, num3;
 
-				 if (nl != n2 && nl < n2 && n2 != n3 && n2 < n3)
-				 {
+for (num1 = 0; num1 <= 8; num1++)
 
-					  putchar(nl + 48);
-					  putchar(n1 + 48);
-					  putchar(nl + 48);
+{
 
- 					  if (nl + n2 + n3 != 24)
-					  {
-						 putchar(',');
-					  	 putchar(' ');
-					 }
-				 }
+for (num2 = num1 + 1; num2 <= 9; num2++)
 
-				 ++ n3;
-			}
-			++ n2;
-		}
-		++ nl;
+{
+
+for (num3 = num2 + 1; num3 < 10; num3++)
+{
+
+putchar((num1 % 10) + '0');
+putchar((num2 % 10) + '0');
+putchar((num3 % 10) + '0');
+
+if (num1 == 7 && num2 == 8 && num3 == 9)
+
+continue;
+
+putchar(',');
+putchar(' ');
+
 }
-putchar('\n')
-return (0)
+}
+
+}
+putchar('\n');
+return (0);
 }
